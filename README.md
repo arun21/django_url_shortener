@@ -1,4 +1,4 @@
-## URL SHORTNER PROJECT IN PYTHON DJANGO FRAMEWORK
+## Url Shortner Project In Python Django Framework
 
 # Technologies
 <i>
