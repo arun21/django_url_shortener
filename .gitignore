@@ -1,0 +1,4 @@
+# Ignore Files
+
+venv_web
+venv_web/
