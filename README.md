@@ -2,9 +2,9 @@
 
 # Technologies
 <i>
-1. Python
-2. Django
-3. HTML, CSS, Bootstrap
+1. Python <br/>
+2. Django <br/>
+3. HTML, CSS, Bootstrap <br/>
 </i>
 
 # Summary
