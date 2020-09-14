@@ -8,5 +8,5 @@
 
 # Summary
 
-It is a tool to shorten a URL or reduce a link.
+It is a tool to shorten a URL or reduce a link.<br>
 Use URL Shortener to create a shortened link making it easy to remember.
