@@ -3,5 +3,6 @@ from . import views
 
 urlpatterns = [
     path('', views.Make, name="Make new"),
-    path('about', views.About, name="About Page")
+    path('<str:token>', views.Home, name="Home"),
+    path('about-app', views.About, name="About Page")
 ]

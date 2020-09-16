@@ -7,7 +7,30 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<center><h1 style="color:green">Hello World</h1></center>
+<center><h1 style="color:blue">SHORTY APP</h1></center>
+<br/>
+<div class="card" style="background-color:grey">
+  <div class="card-header">
+    Create Short URL
+  </div>
+  <div class="card-body">
+    <form method="post">
+        {% csrf_token %}
+      {{ form.as_p }}
+        <button type="submit" class="btn btn-primary" name="button">Save</button>
+    </form>
+  </div>
+</div>
+<br>
+{% if url %}
+<div class="card" style="background-color:grey">
+  <div class="card-body">
+    <h5 class="card-title">{{url}}</h5>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
+{% endif %}
 {% endblock %}
 </body>
 </html>
