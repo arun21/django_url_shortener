@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Records</title>
+</head>
+<body>
+{% extends 'base.html' %}
+
+{% block content %}
+<br/>
+<table class="table">
+  <thead class="bg-info">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Long URL</th>
+      <th scope="col">Short URL</th>
+      <th scope="col">Comments</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for link in urls %}
+    <tr>
+      <th scope="row">{{ forloop.counter0|add:urls.start_index }}</th>
+      <td><a href="{{ link.long_url }}" target="_blank">{{ link.long_url }}</a></td>
+      <td><a href="http:\\{{ host }}\{{ link.short_url }}" target="_blank">{{ link.short_url }}</a></td>
+      <th scope="row">{{ link.comment }}</th>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+<div align="center">
+  {% if urls.has_previous %}
+    <a class="pagination-action" href="?page=1">
+      <i class="fas fa-angle-double-left"></i>
+    </a>
+    <a class="pagination-action" href="?page={{ urls.previous_page_number }}">
+      <i class="fas fa-angle-left"></i>
+    </a>
+  {% endif %}
+    {% for num in urls.paginator.page_range %}
+      {% if urls.number == num %}
+        <span class="pagination-number pagination-current" style="margin: 5px;"> {{ num }} </span>
+      {% elif num > urls.number|add:'-3' and num < urls.number|add:'3' %}
+         <a class="pagination-number" href="?page={{ num }}"> {{ num }} </a>
+      {% endif %}
+    {% endfor %}
+  {% if urls.has_next %}
+    <a class="pagination-action" href="?page={{ urls.next_page_number }}">
+      <i class="fas fa-angle-right"></i>
+    </a>
+    <a class="pagination-action" href="?page={{ urls.paginator.num_pages }}">
+      <i class="fas fa-angle-double-right"></i>
+    </a>
+  {% endif %}
+</div>
+{% endblock %}
+</body>
+</html>

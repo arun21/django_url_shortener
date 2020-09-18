@@ -7,9 +7,26 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<center><h1 style="color:blue">SHORTY APP</h1></center>
+<center><h1 style="color:blue">
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-scissors" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+     <path fill-rule="evenodd" d="M3.5 3.5c-.614-.884-.074-1.962.858-2.5L8 7.226 11.642 1c.932.538 1.472 1.616.858 2.5L8.81 8.61l1.556 2.661a2.5 2.5 0 1 1-.794.637L8 9.73l-1.572 2.177a2.5 2.5 0 1 1-.794-.637L7.19 8.61 3.5 3.5zm2.5 10a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm7 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+  </svg>
+  SHORTY
+  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-scissors" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+     <path fill-rule="evenodd" d="M3.5 3.5c-.614-.884-.074-1.962.858-2.5L8 7.226 11.642 1c.932.538 1.472 1.616.858 2.5L8.81 8.61l1.556 2.661a2.5 2.5 0 1 1-.794.637L8 9.73l-1.572 2.177a2.5 2.5 0 1 1-.794-.637L7.19 8.61 3.5 3.5zm2.5 10a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm7 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+  </svg>
+</h1></center>
 <br/>
-<div class="card" style="background-color:grey">
+{% if is_error %}
+<div class="alert alert-danger" role="alert">
+    {{ url }}
+</div>
+{% endif %}
+<!--
+<div class="alert alert-success" role="alert">
+  Success !!! Short link created.
+</div> -->
+<div class="card" style="background-color:lightgray">
   <div class="card-header">
     Create Short URL
   </div>
@@ -22,15 +39,6 @@
   </div>
 </div>
 <br>
-{% if url %}
-<div class="card" style="background-color:grey">
-  <div class="card-body">
-    <h5 class="card-title">{{url}}</h5>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
-  </div>
-</div>
-{% endif %}
 {% endblock %}
 </body>
 </html>

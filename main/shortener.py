@@ -8,5 +8,5 @@ class shortener:
         self.token_size = token_size
 
     def issue_token(self):
-        letters = string.ascii_letters
+        letters = string.ascii_letters + string.digits
         return ''.join(random.choice(letters) for i in range(self.token_size))
