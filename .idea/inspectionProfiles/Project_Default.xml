@@ -1,0 +1,47 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="8">
+            <item index="0" class="java.lang.String" itemvalue="typer" />
+            <item index="1" class="java.lang.String" itemvalue="parso" />
+            <item index="2" class="java.lang.String" itemvalue="pytest" />
+            <item index="3" class="java.lang.String" itemvalue="pytest-json-report" />
+            <item index="4" class="java.lang.String" itemvalue="objectpath" />
+            <item index="5" class="java.lang.String" itemvalue="docutils" />
+            <item index="6" class="java.lang.String" itemvalue="mongoquery" />
+            <item index="7" class="java.lang.String" itemvalue="Markdown" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N801" />
+          <option value="N802" />
+          <option value="N803" />
+          <option value="N806" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="AutomateWebInfra.src.ec2.vpc.*" />
+          <option value="AutomateWebInfra.src.automate_deployment.client_locator" />
+          <option value="client_finder" />
+          <option value="ec2Impl" />
+          <option value="vpcImpl" />
+          <option value="AutomateWebInfra.src.automate_web_infra.ec2_1" />
+          <option value="AutomateWebInfra.src.automate_web_infra.vpc" />
+          <option value="vpc_launch" />
+          <option value="ec2_launch" />
+          <option value="elb_launch" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
